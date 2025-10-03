@@ -6,9 +6,11 @@ const Navbar = () => {
     <div className="shadow py-4">
       <div className="container flex justify-between items-center">
         <img src={assets.logo} alt="logo" />
-        <div>
-          <button>Recruiter Login</button>
-          <button>Login</button>
+        <div className="flex gap-4 max-sm:text-xs">
+          <button className="text-gray-600">Recruiter Login</button>
+          <button className="text-blue-600 text-white px-6 sm:px-9 py-2 rounded-full">
+            Login
+          </button>
         </div>
       </div>
     </div>
