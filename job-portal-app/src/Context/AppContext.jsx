@@ -8,9 +8,9 @@ const value = {
 
 };
 
-return (<AppContext.Provider>
+return (<AppContext.Provider value={value}>
 
-{props.childrenA}
+{props.children}
 </AppContext.Provider>)
 
  }
