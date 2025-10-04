@@ -8,7 +8,7 @@ const Navbar = () => {
         <img src={assets.logo} alt="logo" />
         <div className="flex gap-4 max-sm:text-xs">
           <button className="text-gray-600">Recruiter Login</button>
-          <button className="text-blue-600 text-white px-6 sm:px-9 py-2 rounded-full">
+          <button className="bg-blue-600 text-white px-6 sm:px-9 py-2 rounded-full">
             Login
           </button>
         </div>
