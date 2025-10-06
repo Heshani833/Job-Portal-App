@@ -6,7 +6,17 @@ const Hero = () => {
 
 const {setSearchFilter,setIsSearched}=React.useContext(AppContext);
 
-const titleRef=React.useRef(null);
+const titleRef=useRef(null);
+const locationRef=useRef(null);
+
+const onSearch=()=>{
+  setSearchFilter({
+    title:titleRef.current.value,
+    location:locationRef.current.value,
+  });
+  setIsSearched(true);
+  
+}
 
   return (
     <div className="container 2xl:px-20 mx-auto my-10">
@@ -31,6 +41,7 @@ const titleRef=React.useRef(null);
               type="text"
               placeholder="Search for jobs..."
               className="p-3 rounded-lg outline-none w-full text-sm"
+              ref={titleRef}
             />
           </div>
 
@@ -46,10 +57,11 @@ const titleRef=React.useRef(null);
               type="text"
               placeholder="Location"
               className="p-3 rounded-lg outline-none w-full text-sm"
+              ref={locationRef}
             />
           </div>
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors duration-200 shadow-sm font-medium w-full sm:w-auto">
+          <button onClick={onSearch} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors duration-200 shadow-sm font-medium w-full sm:w-auto">
             Search
           </button>
         </div>
