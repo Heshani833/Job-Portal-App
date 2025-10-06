@@ -1,6 +1,8 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { AppContext } from "../Context/AppContext";
+import { useRef } from "react";
+
 
 const Hero = () => {
 
