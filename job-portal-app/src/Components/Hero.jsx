@@ -1,7 +1,13 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { AppContext } from "../Context/AppContext";
 
 const Hero = () => {
+
+const {setSearchFilter,setIsSearched}=React.useContext(AppContext);
+
+const titleRef=React.useRef(null);
+
   return (
     <div className="container 2xl:px-20 mx-auto my-10">
       <div className="bg-gradient-to-r from-purple-800 to-purple-950 text-white py-16 text-center mx-2 rounded-xl">
