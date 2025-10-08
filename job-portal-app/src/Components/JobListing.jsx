@@ -4,7 +4,7 @@ import { AppContext } from "../Context/AppContext";
 import { assets } from "../assets/assets";
 
 const JobListing = () => {
-  const { searchFilter, isSearched } = useContext(AppContext);
+  const { searchFilter, isSearched, setSearchFilter } = useContext(AppContext);
 
   return (
     <div>
@@ -15,6 +15,9 @@ const JobListing = () => {
             <span>
               <p>{searchFilter.title && `Title: ${searchFilter.title}`}</p>
               <img
+                onClick={(e) =>
+                  setSearchFilter((prev) => ({ ...prev, title: "" }))
+                }
                 className="cursor-pointer"
                 src={assets.cross_icon}
                 alt="cross-icon"
@@ -24,6 +27,9 @@ const JobListing = () => {
               <p>
                 {searchFilter.location && `Location: ${searchFilter.location}`}
                 <img
+                  onClick={(e) =>
+                    setSearchFilter((prev) => ({ ...prev, location: "" }))
+                  }
                   className="cursor-pointer"
                   src={assets.cross_icon}
                   alt="cross-icon"
